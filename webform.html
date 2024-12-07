@@ -1,0 +1,84 @@
+<!--
+•   text fields for first name, last name, and email address
+
+•   a confirmation field where users will enter the email address for a second time
+
+•   a text area that allows users to ask a question
+
+•   labels for each form field
+
+•   a "Submit" button
+
+Note: The "Submit" button is not meant to submit the form’s information to a server.
+
+Note: This web form is intended to collect information from users.
+
+Note: You will add JavaScript to the web form page in part E below.
+
+
+E.  Add JavaScript code to the web form created in part A3 that produces an alert box if the two email fields do not match.
+
+-->
+<!DOCTYPE html>
+<html style="height: 100%">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="style.css" rel="stylesheet"/>
+        <title>Web Form</title>
+        <script>
+            function validateForm() {
+                var email1 = document.forms["myForm"]["email"].value;
+                var email2 = document.forms["myForm"]["confirmEmail"].value;
+                /* The below if statement will catch different entres for the email address Requirement E. */
+                if (email1 != email2) {
+                    alert("Email addresses do not match!");
+                    return false;
+                }
+                if (email1.trim() === "" || email2.trim() === "")
+                {
+                    alert("Email fields must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body class="form-body">
+        <div class="form-container">
+            <h2>Submit your questions using the form below:</h2>
+            <!-- The form below will will meet task B.3 requirements.-->
+            <form id="myForm">
+                <p>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
+                </p>
+                <p>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="Email" placeholder="Email" id="email">
+                </p>
+                <p>
+                    <label for="confirmEmail">Confirm Email:</label>
+                    <input type="email" name="confirmEmail" placeholder="Confirm Email" id="confirmEmail">
+                </p>
+                <p>
+                    <label for="question">Question:</label><br>
+                    <textarea id="question" name="question"></textarea>
+                </p>
+                <input type="submit" value="Submit" onclick="validateForm()">
+            </form>
+        </div>
+    </body>
+    <footer id="form-footer">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="capital.html">Sacremento</a>
+            <a href="cityOne.html">San Francisco</a>
+            <a href="cityTwo.html">San Diego</a>
+            <!-- add more links as needed -->
+        </nav>
+    </footer>
+</html>

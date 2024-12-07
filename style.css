@@ -1,0 +1,354 @@
+/*
+D.  Create one external CSS stylesheet that includes the following CSS declarations and rules:
+
+1.  one font-family declaration used at least once in the HTML files
+
+2.  a :hover pseudo-class to create a rollover effect for the navigation links
+
+3.  a float property to position one HTML element within the website to the side of another element
+
+4.  absolute positioning on one page that changes the position of an element
+
+5.  relative positioning on one page that changes the position of an element
+
+6.  one of each of the following types of CSS selectors:
+
+    •   a functioning element selector that is used at least once on the website
+
+    •   a functioning class selector that is used twice on the same HTML page
+
+    •   a functioning id selector used at least once on the website
+*/
+
+/* colors to match figma wireframe */
+/* header had no color */
+/* comment out or in to see color zones
+section {
+    background-color: #C85E5E;
+}
+
+.logo {
+    background-color: #7272F0;
+}
+
+nav {
+    background-color: #1818FA;
+}
+
+aside {
+    background-color: #F2B9B9;
+}
+
+footer {
+    background-color: #19C319;
+}
+
+*/
+
+/* update styles for view */
+
+body {
+    font-size: 2em;
+    line-height: 1.5; /* Improves readability */
+    font-family: Arial, sans-serif; /* Modern, clean font */
+    margin: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.cropped-image {
+    width: auto;
+    height: 250px;
+    object-fit: none;
+    clip-path: inset(1080px auto auto 100px);
+}
+
+header {
+    background-image: url('images/poppy-fields-poppies-1658261050.jpg');
+    background-position: 0px -260px;
+    background-size: 736px 490px;
+    background-repeat: repeat-x;
+    height: 155px;
+    width: 100%;
+    color: rgb(253, 253, 255);
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+html {
+    background-color: rgb(122, 170, 233);
+}
+
+/* use and element to set a style per requirement D.6.1 */
+h1, h2, h3, p, footer {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+hr {
+    clear: both;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 5px;
+    object-fit: contain;
+    display: block;
+}
+
+.homeHeader {
+    display: flex;
+    align-items: flex-start; /* Align logo and header at the top */
+}
+
+/* set style for image div on haome page*/
+.image-div {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* use float to align elements requirment D.3 class used for requirement D.6.2 */
+.float-left {
+    float: left;
+    margin-right: 20px; /* Space between the two images */
+    max-width: 45%; /* Optional: Adjust the width of the images */
+    height: auto;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px; /* Space between the two images */
+    max-width: 45%; /* Optional: Adjust the width of the images */
+    height: auto;
+}
+
+.image-div img {
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* syle for the skyline images on the home page*/
+.skylineImage {
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.skyline-div {
+    text-align: center;
+}
+
+aside.city-info {
+    flex: 1;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    width:  fit-content;
+    height: fit-content;
+}
+
+.image-aside-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.image-aside-group figure {
+    flex: 2;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.flex-div {
+    display: flex;
+}
+
+.flex-div p {
+    flex: 1; /* Allocate more space to the paragraph */
+    margin: 0;
+}
+
+.flex-div main {
+    flex: 2; /* Allocate more space to the paragraph */
+    margin: 0;
+}
+
+/* use and id to set a style per requirement D.6.3 */
+#home-nav {
+    display: flex;
+    gap: 15px; /* Space between navigation links */
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1em;
+}
+
+
+#home-aside {
+    text-align: left;
+    font-size: 1em;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+}
+
+#home-aside ol {
+    margin: 0;
+}
+
+#home-aside ol li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007BFF; /* Adjust to your desired link color */
+    font-weight: bold;
+}
+
+/* rollover effect for a nav element using hover requirment D.2 */
+nav a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Hover color for links */
+}
+
+a img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+}
+
+.city-nav {
+    float: left;
+    width: fit-content;
+    height: auto;
+}
+
+.side-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    gap: 5px;
+}
+
+.city-main {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.city-section {
+    flex:2;
+}
+
+.city-section img {
+    max-width: 903;
+    max-height: 558;
+}
+
+/* Table style*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: center;
+}
+
+/* form style */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #030508;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 1%;
+}
+
+form p {
+    display: flex;
+    align-items: center; /* Ensure label and input are vertically aligned */
+    gap: 5px; /* Add spacing between label and input */
+}
+
+/* The font family is set here Requirement D.1 */
+form label {
+    flex: 1;
+    text-align: left;
+    width: fit-content;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    flex: 1;
+    width: 100%;
+    padding: 5px;
+}
+
+.form-body {
+    background-image: url(images/poppy-fields-poppies-1658261050.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+/* Center form container vertically and horizontally */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Take up full screen height */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    top: -33%;
+    right: 18%;
+}
+
+#form-footer nav {
+    font-size: 1em;
+    position: absolute;
+    left: 63%;
+    bottom: 5px;
+}
